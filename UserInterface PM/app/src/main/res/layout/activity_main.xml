@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="20dp"
+    sothree:umanoShadowHeight="0dp"
+    sothree:umanoFadeColor="@android:color/transparent"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@drawable/nav_bar_background"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp">
+                <ImageButton
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:background="@null"
+                    android:src="@drawable/menu"
+                    android:id="@+id/menu_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:clickable="true" />
+                <TextView
+                    android:textSize="16dp"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/status_bar_text"
+                    android:text="@string/disarmed_text"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="3dp"/>
+                <TextView
+                    android:textSize="16dp"
+                    android:text="@string/connected_text"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="5dp"
+                    android:drawablePadding="15dp"
+                    android:drawableRight="@drawable/green_signal"/>
+        </LinearLayout>
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0"
+                    />
+            <android.support.v4.view.ViewPager
+            android:layout_height="0dp"
+            android:layout_width="fill_parent"
+            android:id="@+id/pager"
+            android:layout_weight="1"/>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <fragment android:name="com.example.dmitriy.userinterface.Arming_panel_fragment"
+        android:id="@+id/arming_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+        tools:layout="@layout/arming_panel_fragment" />
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+
