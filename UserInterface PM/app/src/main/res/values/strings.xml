@@ -7,4 +7,10 @@
     <string name="action_logout">Logout</string>
     <string name="disarmed_text">Disarm</string>
     <string name="connected_text">Connected</string>
+    <string name="login_asking">Please Login</string>
+    <string name="host_address_hint">Host Address</string>
+    <string name="panel_id_hint">Panel ID</string>
+    <string name="terms_of_use_text">Terms of use</string>
+    <string name="next_button_text">Next</string>
+    <string name="title_activity_login_screen">LoginScreenActivity</string>
 </resources>
