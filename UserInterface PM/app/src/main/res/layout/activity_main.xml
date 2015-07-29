@@ -8,6 +8,7 @@
     android:gravity="bottom"
     sothree:umanoPanelHeight="20dp"
     sothree:umanoShadowHeight="0dp"
+    sothree:umanoDragView="@+id/dragView"
     sothree:umanoFadeColor="@android:color/transparent"
     tools:context=".MainActivity">
 
@@ -85,15 +86,31 @@
             </LinearLayout>
         </TabHost>
     </LinearLayout>
-
-    <fragment android:name="com.example.dmitriy.userinterface.Arming_panel_fragment"
-        android:id="@+id/arming_panel"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-           android:layout_centerHorizontal="true"
-        tools:layout="@layout/arming_panel_fragment" />
-
+        android:orientation="vertical"
+        android:background="@null">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/disclosure_up"
+            android:clickable="true"
+            android:id="@+id/dragwView"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="top"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            />
+        <fragment android:name="com.example.dmitriy.userinterface.ArmingPaneFragment"
+            android:id="@+id/arming_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            tools:layout="@layout/arming_panel_fragment" />
+    </LinearLayout>
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
 

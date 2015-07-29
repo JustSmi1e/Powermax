@@ -1,10 +1,12 @@
 package com.example.dmitriy.userinterface;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class LoginScreenActivity extends Activity {
@@ -36,4 +38,11 @@ public class LoginScreenActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void onNextButtonClick(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+    }
+
 }

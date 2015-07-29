@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 /**
  * Created by Dmitriy on 25.05.2015.
  */
-public class Arming_panel_fragment extends Fragment {
+public class ArmingPaneFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
