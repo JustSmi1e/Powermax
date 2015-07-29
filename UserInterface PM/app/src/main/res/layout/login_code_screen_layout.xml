@@ -59,74 +59,99 @@
                 android:id="@+id/host_address"
                 android:layout_width="200dp"
                 android:layout_height="fill_parent"
-                android:hint="@string/host_address_hint"
-                android:inputType="textUri"
+                android:hint="@string/user_code_hint"
+                android:inputType="numberPassword"
                 android:layout_weight="1"
                 android:lines="1"
                 android:padding="10dp"
                 android:gravity="center_horizontal"
                 android:clickable="true"
-                android:enabled="true" />
-
-
-        </TableRow>
-        <TableRow android:paddingTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <EditText
-                android:layout_gravity="center"
-                android:background="@drawable/host_address_field"
-                android:minWidth="200dp"
-                android:id="@+id/panel_id"
-                android:layout_width="200dp"
-                android:layout_height="fill_parent"
-                android:hint="@string/panel_id_hint"
-                android:inputType="text"
-                android:layout_weight="1"
-                android:lines="1"
-                android:padding="10dp"
-                android:gravity="center_horizontal"
-                 />
-        </TableRow>
-        <TableRow android:paddingTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-                    <CheckBox
-                        android:buttonTint="@color/background_material_light"
-                        android:id="@+id/terms_of_use_check"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="4"
-                        android:gravity="center_vertical"
-                       />
-                    <TextView
-                        android:id="@+id/terms_of_use_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:textColor="#ffffff"
-                        android:textSize="21dp"
-                        android:text="@string/terms_of_use_text"
-                        android:layout_weight="1"
-                        android:clickable="true" />
-            </LinearLayout>
-        </TableRow>
-        <TableRow android:paddingTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <Button
-                android:background="@drawable/next_button_selector"
-                android:text="@string/next_button_text"
-                android:textColor="#ffffff"
-                android:textSize="21dp"
-                android:id="@+id/next_button"
-                android:layout_width="20dp"
-                android:layout_height="fill_parent"
-                android:clickable="true"
-                android:onClick="onNextButtonClick"
                 android:enabled="true" />
         </TableRow>
     </TableLayout>
+    <GridLayout
+        android:paddingTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:rowCount="4">
+
+        <Button
+            android:id="@+id/digit1_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit1" />
+
+        <Button
+            android:id="@+id/digit2_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit2" />
+
+        <Button
+            android:id="@+id/digit3_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit3" />
+
+        <Button
+            android:id="@+id/digit4_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit4" />
+
+        <Button
+            android:id="@+id/digit5_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit5" />
+
+        <Button
+            android:id="@+id/digit6_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit6" />
+
+
+        <Button
+            android:id="@+id/digit7_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit7" />
+
+        <Button
+            android:id="@+id/digit8_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit8" />
+
+        <Button
+            android:id="@+id/digit9_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit9" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/login"
+            android:text="@string/login_button"
+            android:textSize="18sp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/digit0_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/digit0" />
+
+        <Button
+            android:id="@+id/backspace_button"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:background="@drawable/backspace" />
+
+    </GridLayout>
 </LinearLayout>

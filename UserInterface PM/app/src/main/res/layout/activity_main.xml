@@ -32,7 +32,7 @@
                     android:layout_height="fill_parent"
                     android:clickable="true" />
                 <TextView
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:textColor="#FFFFFF"
                     android:id="@+id/status_bar_text"
                     android:text="@string/disarmed_text"
@@ -43,7 +43,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="3dp"/>
                 <TextView
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:text="@string/connected_text"
                     android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
@@ -86,31 +86,13 @@
             </LinearLayout>
         </TabHost>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <fragment android:name="com.example.dmitriy.userinterface.ArmingPaneFragment"
+        android:id="@+id/arming_panel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@null">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:src="@drawable/disclosure_up"
-            android:clickable="true"
-            android:id="@+id/dragwView"
-            android:layout_weight="1"
-            android:layout_gravity="center_horizontal"
-            android:gravity="top"
-            android:scaleX="0.75"
-            android:scaleY="0.75"
-            />
-        <fragment android:name="com.example.dmitriy.userinterface.ArmingPaneFragment"
-            android:id="@+id/arming_panel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            tools:layout="@layout/arming_panel_fragment" />
-    </LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/arming_panel_fragment" />
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
 

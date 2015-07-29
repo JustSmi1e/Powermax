@@ -1,26 +1,24 @@
 package com.example.dmitriy.userinterface;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class LoginScreenActivity extends Activity {
+public class UserCodeActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.credentials_screen_layout);
+        setContentView(R.layout.login_code_screen_layout);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_user_code, menu);
         return true;
     }
 
@@ -38,11 +36,4 @@ public class LoginScreenActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void onNextButtonClick(View view){
-        Intent intent = new Intent(this, UserCodeActivity.class);
-        startActivity(intent);
-
-    }
-
 }
