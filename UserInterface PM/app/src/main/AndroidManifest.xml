@@ -24,6 +24,12 @@
             android:name=".UserCodeActivity"
             android:label="@string/title_activity_user_code" >
         </activity>
+
+        <service
+            android:name=".RetrofitSpiceService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>
